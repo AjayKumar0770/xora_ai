@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chatbot | k3coding</title>
+    <!-- Linking Google fonts for icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <span class="title">k3coding</span>
+  </div>
+
+  <div class="chatbot-popup">
+    <!-- Chatbot Header -->
+    <div class="chat-header">
+      <div class="header-info">
+        <img class="chatbot-logo" src="robotic.png" alt="Chatbot Logo" width="50" height="50">
+        </img>
+        <h2 class="logo-text">Chatbot</h2>
+      </div>
+      <button id="close-chatbot" class="material-symbols-rounded">keyboard_arrow_down</button>
+    </div>
+
+    <!-- Chatbot Body -->
+    <div class="chat-body">
+      <div class="message bot-message">
+        <img class="bot-avatar" src="robotic.png" alt="Chatbot Logo" width="50" height="50">
+        </img>
+        <!-- prettier-ignore -->
+        <div class="message-text"> Hey there  <br /> How can I help you today? </div>
+      </div>
+    </div>
+
+    <!-- Chatbot Footer -->
+    <div class="chat-footer">
+      <form action="#" class="chat-form">
+        <textarea placeholder="Message..." class="message-input" required></textarea>
+        <div class="chat-controls">
+          <button type="button" id="emoji-picker" class="material-symbols-outlined">sentiment_satisfied</button>
+          <div class="file-upload-wrapper">
+            <input type="file" accept="image/*" id="file-input" hidden />
+            <img src="#" />
+            <button type="button" id="file-upload" class="material-symbols-rounded">attach_file</button>
+            <button type="button" id="file-cancel" class="material-symbols-rounded">close</button>
+          </div>
+          <div class="pdf-upload-wrapper">
+            <input type="file" accept="application/pdf" id="pdf-input" hidden />
+            <button type="button" id="pdf-upload" class="material-symbols-rounded">picture_as_pdf</button>
+            <button type="button" id="pdf-cancel" class="material-symbols-rounded">close</button>
+          </div>
+          <button type="submit" id="send-message" class="material-symbols-rounded">arrow_upward</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Side Section -->
+  <div class="side-section">
+    <button id="side-toggler" class="material-symbols-rounded">menu</button>
+    <div class="side-content">
+      <h2>Chat History</h2>
+      <button id="new-chat" class="material-symbols-rounded">add</button> <!-- New Chat Button -->
+      <button id="show-iframe" class="material-symbols-rounded">web</button> <!-- Show Iframe Button -->
+      <div id="chat-sessions"></div> <!-- Container for chat sessions -->
+    </div>
+  </div>
+
+  <!-- Iframe Overlay -->
+  <div id="iframe-overlay" class="iframe-overlay">
+    <button id="close-iframe" class="material-symbols-rounded">close</button>
+    <iframe src="https://github.com" frameborder="0"></iframe>
+  </div>
+
+  <!-- Linking Emoji Mart script for emoji picker -->
+  <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+
+  <!-- Linking custom script -->
+  <script src="script.js"></script>
+</body>
+</html>
